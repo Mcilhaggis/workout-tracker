@@ -21,6 +21,7 @@ const workoutSchema = new Schema({
 
 });
 
+//Creates the collection/table workout
 const workout = mongoose.model("Workout", workoutSchema);
 
 module.exports = workout;

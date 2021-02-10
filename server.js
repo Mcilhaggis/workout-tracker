@@ -17,9 +17,9 @@ app.use(express.static("public"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
 
-//Require the routes in a seperate folder
-app.use(require("./routes.api-routes.js"))
-app.use(require("./routes.html-routes.js"))
+//Require the routes from a seperate folder to seperate concerns
+app.use(require("./routes/api-routes.js"))
+app.use(require("./routes/html-routes.js"))
 
 app.listen(PORT, () => {
     console.log(`App running on ${PORT}`)

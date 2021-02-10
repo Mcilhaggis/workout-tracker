@@ -10,30 +10,13 @@ const workoutSchema = new Schema({
   },
   //Creating the exercise fields an an array to hold all of the exercise proprties I need it to
   exercise: [{
-    type: {
-      type: String,
-      trim: true
-    },
-    name: {
-      type: String,
-      trim: true
-    },
-    duration: {
-      type: Number,
-      default: 0
-    },
-    weight: {
-      type: Number,
-      default: 0
-    },
-    reps: {
-      type: Number,
-      default: 0
-    },
-    sets: {
-      type: Number,
-      default: 0
-    }
+    type: { type: String, trim: true, required: "Enter the name of the exercise" },
+    name: { type: String, trim: true, required: "Enter the type of workout" },
+    duration: { type: Number, default: 0, required: "Enter the duration"},
+    weight: { type: Number, default: 0 },
+    reps: { type: Number, default: 0 },
+    sets: { type: Number, default: 0 },
+    distance: { type: Number, default: 0}
   }]
 
 });

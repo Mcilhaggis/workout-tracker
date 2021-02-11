@@ -24,8 +24,8 @@ router.put("/api/workouts/:id", (req, res) => {
 });
 
 //create workout
-router.post("/api/workouts", ({ body }, res) => {
-    Workout.create(body)
+router.post("/api/workouts", (req, res) => {
+    Workout.create({})
         .then((dbWorkout) => {
             res.json(dbWorkout);
         })
@@ -38,7 +38,7 @@ router.get("/api/workouts/range", (req, res) => {
     Workout.aggregate([{
             $addFields: { totalDuration: { $sum: "$exercises.duration" } },
         }])
-        .sort({ day: -1 })
+        .sort({ id: -1 })
         .limit(7)
         .then((data) => {
             res.json(data.reverse());

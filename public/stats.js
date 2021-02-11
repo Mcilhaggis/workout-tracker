@@ -22,9 +22,12 @@ function generatePalette() {
 }
 
 function populateChart(data) {
+  console.log(data);
   let durations = data.map(({ totalDuration }) => totalDuration);
+  console.log(durations);
   let pounds = calculateTotalWeight(data);
   let workouts = workoutNames(data);
+  console.log(workouts)
   const colors = generatePalette();
 
   let line = document.querySelector('#canvas').getContext('2d');

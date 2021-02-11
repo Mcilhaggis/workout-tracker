@@ -11,19 +11,23 @@ const workoutSchema = new Schema({
     },
     // Creating the exercises field as an array to hold the actual exercise properties
     exercises: [{
-        name: {
-            type: String,
-            trim: true
-        },
         type: {
             type: String,
             trim: true
         },
-        weight: {
+        name: {
+            type: String,
+            trim: true
+        },
+        duration: {
             type: Number,
             default: 0
         },
-        sets: {
+        distance: {
+            type: Number,
+            default: 0
+        },
+        weight: {
             type: Number,
             default: 0
         },
@@ -31,11 +35,7 @@ const workoutSchema = new Schema({
             type: Number,
             default: 0
         },
-        duration: {
-            type: Number,
-            default: 0
-        },
-        distance: {
+        sets: {
             type: Number,
             default: 0
         }

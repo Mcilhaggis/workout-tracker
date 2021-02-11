@@ -24,7 +24,7 @@ mongoose.connect(
       useFindAndModify: false
     }
   );
-  
+
 //Require the routes from a seperate folder to seperate concerns
 app.use(require("./routes/api-routes.js"))
 app.use(require("./routes/html-routes.js"))
@@ -32,3 +32,5 @@ app.use(require("./routes/html-routes.js"))
 app.listen(PORT, () => {
     console.log(`App running on ${PORT}`)
 })
+
+//test

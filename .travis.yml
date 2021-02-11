@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- stable
+npm: true
+cache:
+  directories:
+  - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: JJvX/Qkamv0EpZtwD85YmMrL+b+jvIJmDKDB9QFCW4AHZd8IxJIxmCpkyrWwQZc4y4E8lDJ0gzlFmOO31bRPpeuAwm3dm+oVwl9lcCfBXJ3PChuvZbCDvqiA6qhxAzzBupBUHYJiddhGzZSnWOYOCrrdJFrWf9TMMinUKTF1hynzeywpFL81ILhagZ7E7Is7bk/P9djtld/P8JPoAf64OIQSeS4y/wkGTRo9wROOviSGNhGj6XTwFNYTR8C+zQA1KGR4vprUsk0AyRTlLOuIAOLLhSAVLgKp+oBBl3eSDNNPheVbaw/WZBy+mZIfUFxPnYA2fjXemhXydgOKRDWd/eFmW4G06da5Qv14+aRvmU8g3ULuEimBOZ6XKvPO9htBuUQbVdDmWwwehynK9BGIGuBS/kcHjrci6HuNYHPHVaHHRpE+fxLH4R8BUL6RVOtvspBEgvJzQdTY8QN+OlCjXWvAAdPGOl7/nULfkLFCSj931yK907nY89rAUNyma907+eiwDWwgyqPpezK+RaxOy9GnT8zn7SzN6uUkREOfp6mnTNaS4b+/3LHQnble6RCXjB9Ed8iCZvl0BQUbZvkvdsrS3DrQmm4ieW3RKGZJkHXxQEtuVAjyGhBxjLWcn9+UinKZYKp2hW7+e6qS1a9UlH9ljNGENcbeBVtFz3o3o3U=
+  app: mighty-sands-38704
+  on:
+    all_branches: 'true'
+    repo: Mcilhaggis/workout-tracker
+  skip_cleanup: 'true'
+script:
+- echo "skipping tests"

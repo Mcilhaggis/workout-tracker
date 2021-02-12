@@ -19,7 +19,9 @@ The application will then console log the url in the terminal that you will need
 Server listening on: http://localhost:8080 then this into a browser of your choice.
 
 ### Screenshots
-![Screenshot of Workout Tracker](/assets/images/Weather-screenshot-1.png "Screenshot of Workout Tracker")
+![Screenshot of Workout Tracker](/images/screenshot-1.png "Screenshot of Workout Tracker landing page")
+![Screenshot of Workout Tracker](/images/screenshot-2.png "Screenshot of Workout Tracker and exercise input fields")
+![Screenshot of Workout Tracker](/images/screenshot-3.png "Screenshot of Workout Tracker dashboard dispalying data")
 
 ## URL
 The project can be live hosted on heroku here: 

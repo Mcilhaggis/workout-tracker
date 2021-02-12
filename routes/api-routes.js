@@ -48,7 +48,7 @@ router.get("/api/workouts/range", (req, res) => {
         .sort({ day: -1 })
         .limit(7)
         .then((data) => {
-            res.json(data.reverse());
+            res.json(data);
         })
         .catch((err) => {
             res.status(400).json(err);
